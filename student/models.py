@@ -25,6 +25,8 @@ class Lesson(models.Model):
 
 
 class Package(models.Model):
+    class Meta:
+        ordering=['-name']
     name=models.CharField(max_length=100 , null=False  )
     description=models.TextField(default="this is a Package")
 
